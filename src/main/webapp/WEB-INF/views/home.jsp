@@ -7,20 +7,8 @@
 <!-- 브라우저에 관계없이 파비콘을 보여주려면 두개의 링크가 모두 필요하다 -->
 <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon (1).ico">	
 <link rel="icon" href="resources/images/favicon (1).ico">
+<c:import url="./temp/font.jsp" />
 <style type="text/css">
-@import 
-url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css); 
-.jejumyeongjo * { 
-font-family: 'Jeju Myeongjo', serif; 
-}
-
-@font-face { 
-	font-family: 'KBIZHanmaumGothic'; 
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumGothic.woff') format('woff'); 
-	font-weight: normal; 
-	font-style: normal; 
-}
-
 *{
 	margin: 0;
 	padding: 0;
@@ -31,103 +19,63 @@ font-family: 'Jeju Myeongjo', serif;
 	width: 100%;
 	font-family: Jeju Myeongjo;
 }
+.main{
+	widows: 100%;
+	height: 1000px;
+}
 
-.header{
+.footer{
 	width: 100%;
-	height: 100px;
-	margin-top: 10px;
-	vertical-align: bottom;
+	height: 400px;
 }
 
-.header-top{
-	height: 30px;
-	width: 100%;
+.footer-top, .footer-check{
+	width: 67%;
+	margin: 0 auto;
 }
 
-.boundary{
-	color: #999999;
-}
-
-.menu-top{
-	list-style: none;
+.f-logo{
 	display: inline-block;
-	float: right;
-	margin-right: 5%;
-	font-family: KBIZHanmaumGothic;
 }
 
-.menu-top li {
-	display: inline-block;
-	font-weight: 599;
-	padding-right: 3px;
-}
 
-.menu-top li a{
-	text-decoration: none;
-	color: black;
-}
-
-.header-main{
-	width: 100%;
-	height:150px;
-	background-color: white;
-}
-
-.main-movie{
-	width: 100%;
-	list-style: none;
+.footer-text{
+	padding-left: 3.4%;
 	float: left;
-	text-align: center;
-	font-family: KBIZHanmaumGothic;
-	font-size: 1.5em;
-	line-height: 100px;
+	width: 50%;
+	margin-right: 30%;
 }
 
-.logo{
-	display: inline-block;
+.text{
+	padding-bottom: 3px;
+	font-size: 1.3em;
 }
 
-.main-movie li {
-	display: inline-block;
-	font-weight: 599;
-	padding-right: 65px;
-}
-
-.main-movie li a{
-	text-decoration: none;
-	color: black;
-}
 
 </style>
 </head>
 <body>
 <div class="container">
-	<div class="header">
-		<div class="header-top">
-			<ul class="menu-top">
-				<li><a href="#">로그인 </a></li>
-				<li class="boundary"> | </li>
-				<li ><a href="#">회원 가입</a> </li>
-				<li><a href="#">마이 페이지</a></li>
-				<li class="boundary"> | </li>
-				<li><a href="#">로그 아웃</a></li>
-			</ul>
-		</div>
-		<div class="header-main">
-			<ul class="main-movie">
-				<li><a href="#"><img src="resources/images/logo.png" style="width: 100px; height: 100px; vertical-align: middle;" class="logo"></a></li>
-				<li><a href="#">영화</a></li>
-				<li><a href="#">예매</a></li>
-				<li><a href="#">스토어</a></li>
-				<li><a href="#">이벤트</a></li>
-			</ul>
-		</div>
-	</div>
+<c:import url="./temp/header.jsp" />
 	<div class="main">
 	
 	</div>
 	<div class="footer">
-	
+		<div class="footer-top">
+			<img class="f-logo" alt="logo" src="./resources/images/Untitled.jpg" style="width: 200px; height: 200px; vertical-align: middle; position: ab">
+		</div>
+		<div class="footer-check">
+			<div class="footer-text">
+				<div class="text">(04377)서울특별시 용산구 한강대로 23길 55</div>
+				<div class="text">대표자 : 박민지 </div>
+				<div class="text">고객센터 : 114</div>
+			</div>
+		</div>
+		<div class="footer-sns">
+			<a href="#"><img src="resources/images/facebook.jpg" style="height: 55px; width: 55px; margin-left: 15px;"></a>
+			<a href="#"><img src="resources/images/instagram.jpg" style="height: 58px; width: 58px; margin-left: 15px;"></a>
+			<a href="#"><img src="resources/images/twitter.png" style="height: 60px; width: 60px; margin-left: 15px;"></a>
+		</div>
 	</div>
 </div>
 </body>

@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+.header{
+	width: 100%;
+	height: 100px;
+	vertical-align: bottom;
+	margin: 0 auto;
+}
+
+.header-top{
+	height: 40px;
+	width: 100%;
+	background-color: black;
+	line-height: 40px;
+}
+
+.boundary{
+	color: #999999;
+}
+
+.menu-top{
+	list-style: none;
+	display: inline-block;
+	float: right;
+	margin-right: 5%;
+	font-family: KBIZHanmaumGothic;
+}
+
+.menu-top li {
+	display: inline-block;
+	font-weight: 599;
+	padding-right: 3px;
+}
+
+.menu-top li a{
+	text-decoration: none;
+	color: white;
+}
+
+.header-main{
+	width: 80%;
+	height:150px;
+	margin: 0 auto;
+}
+
+.main-movie{
+	width: 100%;
+	list-style: none;
+	float: left;
+	font-family: KBIZHanmaumGothic;
+	font-size: 1.5em;
+	line-height: 100px;
+	margin:0 auto;
+	text-align: center;
+}
+
+.logo{
+	display: inline-block;
+	margin-right: 150px;
+}
+
+.main-movie li {
+	display: inline-block;
+	font-weight: 599;
+	padding-right: 150px;
+}
+
+.main-movie li a{
+	text-decoration: none;
+	color: black;
+}
