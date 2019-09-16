@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
 </head>
 <body>
@@ -28,7 +29,7 @@
 		</div>
 		<div class="header-main">
 			<ul class="main-movie">
-				<li><a href="${pageContext.request.contextPath}"><img src="resources/images/black_logo.png" style="width: 100px; height: 100px; vertical-align: middle; margin-top: 20px;" class="logo"></a></li>
+				<li><a href="${pageContext.request.contextPath}"><img src="${pageContext.request.contextPath}/resources/images/black_logo.png" style="width: 100px; height: 100px; vertical-align: middle; margin-top: 20px;" class="logo"></a></li>
 				<li><a href="${pageContext.request.contextPath}/notice/noticeList">공지사항</a></li>
 				<li><a href="#">영화</a></li>
 				<li><a href="#">예매</a></li>

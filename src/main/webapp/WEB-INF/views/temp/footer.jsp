@@ -11,7 +11,7 @@
 <body>
 	<div class="footer">
 		<div class="footer-top">
-			<img class="f-logo" alt="logo" src="./resources/images/white_logo.png" style=" margin-top:15px; width: 150px; height: 150px; margin-bottom:25px; vertical-align: middle; position: ab">
+			<img class="f-logo" alt="logo" src="${pageContext.request.contextPath}/resources/images/white_logo.png" style=" margin-top:15px; width: 150px; height: 150px; margin-bottom:25px; vertical-align: middle; position: ab">
 		</div>
 		<div class="footer-check">
 			<div class="footer-text">

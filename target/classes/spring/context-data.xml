@@ -8,7 +8,7 @@
 		<property name="username" value="${oracle.user}"  />
 		<property name="password" value="${oracle.pw}"/>
 		<property name="url" value="${oracle.url}" />
-		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="driverClassName" value="${oracle.driver}" />
 	</bean>
 		<!-- mapper&config 위치도 여기에서 세팅해줌 -->
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactoryBean">
