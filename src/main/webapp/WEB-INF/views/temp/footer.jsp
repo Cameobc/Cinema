@@ -21,9 +21,9 @@
 			</div>
 		</div>
 		<div class="footer-sns">
-			<a href="#"><img src="resources/images/facebook_gray.png" style="height: 45px; width: 45px; margin-left: 15px;"></a>
-			<a href="#"><img src="resources/images/instagram_gray.png" style="height: 45px; width: 45px; margin-left: 15px;"></a>
-			<a href="#"><img src="resources/images/twitter_gray.png" style="height: 45px; width: 45px; margin-left: 15px;"></a>
+			<a href="#"><img src="${pageContext.request.contextPath}/resources/images/facebook_gray.png" style="height: 45px; width: 45px; margin-left: 15px;"></a>
+			<a href="#"><img src="${pageContext.request.contextPath}/resources/images/instagram_gray.png" style="height: 45px; width: 45px; margin-left: 15px;"></a>
+			<a href="#"><img src="${pageContext.request.contextPath}/resources/images/twitter_gray.png" style="height: 45px; width: 45px; margin-left: 15px;"></a>
 		</div>
 	</div>
 </body>

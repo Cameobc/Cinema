@@ -10,5 +10,7 @@
     		<typeAlias type="com.project.member.MemberVO" alias="MemberVO"/>
     		<typeAlias type="com.project.board.BoardVO" alias="BoardVO"/>
     		<typeAlias type="com.project.memberfile.MemberFileVO" alias="MemberFileVO"/>
+    		<typeAlias type="com.project.board.notice.NoticeVO" alias="NoticeVO"/>
+    		<typeAlias type="com.project.files.FilesVO" alias="FilesVO"/>
     	</typeAliases>
     </configuration>

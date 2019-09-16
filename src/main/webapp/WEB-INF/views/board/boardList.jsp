@@ -10,6 +10,7 @@
 <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico">
 <c:import url="../temp/font.jsp" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/memberJoin.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <style type="text/css">
 *{
 	margin: 0;
@@ -49,8 +50,8 @@
 		</div>
 	</div>
 <script type="text/javascript">
-	document.getElementByID('write').onclick = function() {
-		locaiton.href="./noticeWrite";
+document.getElementById("write").onclick = function() {
+		window.location.href="./noticeWrite";
 	}
 </script>	
 <c:import url="../temp/footer.jsp" />

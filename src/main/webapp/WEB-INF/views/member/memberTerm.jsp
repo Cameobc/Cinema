@@ -11,6 +11,7 @@
 <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico">
 <c:import url="../temp/font.jsp" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/memberTerm.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="container">

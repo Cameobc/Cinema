@@ -11,6 +11,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico">	
 <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico">
 <c:import url="./temp/font.jsp" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <style type="text/css">
 *{
 	margin: 0;
