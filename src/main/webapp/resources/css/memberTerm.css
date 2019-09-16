@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	width: 100%;
+}
+
+.main{
+	clear: both;
+	width: 65%;
+	height: 1100px;
+	margin: 0 auto;
+}
+
+.term-text1{
+	margin-top:70px;
+	display: inline-block;
+}
+
+.t1{
+	margin-left: 10px;
+	color: #666;
+}
+
+.term-text{
+	padding-left: 15px;
+	margin-top: 45px;
+	margin-bottom: 25px;
+}
+
+.term{
+	margin-left: 15px;
+	overflow: auto;
+	height: 250px;
+	border: 1px solid #e8e7e7;
+	color: #666;
+	font-size: 0.8em;
+	padding-right: 25px;
+}
+
+dt{
+	margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+}
+
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+dd>ol {
+    padding-left: 25px;
+}
+
+ol > li{
+	list-style: decimal;
+}
+
+dd > table, tr, td{
+	border: 1px solid #848484;
+	border-collapse: collapse;
+	border-spacing: 0;
+	padding : 10px;
+}
+
+dd > table{
+	margin: 20px 0;
+}
+
+.first-td{
+	width: 20%;
+}
+
+.table-text{
+	text-align: center;
+}
+
+.red{
+	color: #666;
+	font-size: 0.8em;
+	font-weight: normal;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+.check {
+	position:relative;
+	padding:20px;
+	margin-top: 20px;
+}
+
+input[type="checkbox"] {
+	position:absolute;
+	top:0;
+	left:0;
+	width:26px;
+	height:26px;
+	padding-top:4px;
+}
+
+label {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+	padding-left:33px;
+	line-height:26px;
+	cursor:pointer
+}
+
+label:before {
+	content:"";
+	position:absolute;
+	top:4px;
+	left:5px;
+	display:block;
+	width:18px;
+	height:18px;
+	line-height:18px;
+	background:white;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+input[type=checkbox]:checked + label:before {
+	content:"\2713";
+	text-align:center;
+	font-weight:800;
+	line-height:18px;
+	color:#fa3062;
+}
+
+.css-label{
+	font-size: 0.8em;
+}
+
+.btn-div{
+	text-align: center;
+}
+
+.btn{
+	width: 120px;
+	height: 60px;	
+	margin-left: 20px;
+	font-family: GyeonggiBatang; 
+	font-size: 1.3em;
+	background-color: white;
+	border:none;
+	font-weight: bold;
+	cursor: pointer;
+}	
+
+#cancle{
+	background-color: #DD4132;
+	color:white;
+}
+
+#next{
+	border:1px solid #666;
+}

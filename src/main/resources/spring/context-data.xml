@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<!-- connection - properties 파일 사용  -->
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+		<property name="username" value="${oracle.user}"  />
+		<property name="password" value="${oracle.pw}"/>
+		<property name="url" value="${oracle.url}" />
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+	</bean>
+		<!-- mapper&config 위치도 여기에서 세팅해줌 -->
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath:myBatis/mappers/**/*.xml" />
+		<property name="configLocation" value="classpath:myBatis/config/myBatisConfig.xml" />
+	</bean>
+	
+	<bean class="org.mybatis.spring.SqlSessionTemplate" id="sqlSession">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
+	</bean>
+	
+
+</beans>

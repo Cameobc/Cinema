@@ -21,7 +21,7 @@
 				<c:otherwise>
 					<li><a href="#">로그인 </a></li>
 					<li class="boundary"> | </li>
-					<li ><a href="#">회원 가입</a> </li>
+					<li ><a href="${pageContext.request.contextPath}/member/memberTerm">회원 가입</a> </li>
 				</c:otherwise>
 			</c:choose>
 			</ul>
@@ -29,6 +29,7 @@
 		<div class="header-main">
 			<ul class="main-movie">
 				<li><a href="${pageContext.request.contextPath}"><img src="resources/images/black_logo.png" style="width: 100px; height: 100px; vertical-align: middle; margin-top: 20px;" class="logo"></a></li>
+				<li><a href="${pageContext.request.contextPath}/notice/noticeList">공지사항</a></li>
 				<li><a href="#">영화</a></li>
 				<li><a href="#">예매</a></li>
 				<li><a href="#">스토어</a></li>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="MemberMapper">
+  	<!-- 회원가입 -->
+  	<insert id="setJoin" parameterType="MemberVO">
+  		INSERT INTO MEMBER VALUES
+  		(#{id}, #{pw}, #{name}, #{nickname}, #{phone}, #{email}, #{age}, #{gender}, 2)
+  	</insert>
+  </mapper>

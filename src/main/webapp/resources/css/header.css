@@ -56,13 +56,13 @@
 
 .logo{
 	display: inline-block;
-	margin-right: 150px;
+	margin-right: 50px;
 }
 
 .main-movie li {
 	display: inline-block;
 	font-weight: 599;
-	padding-right: 150px;
+	padding-right: 130px;
 }
 
 .main-movie li a{
