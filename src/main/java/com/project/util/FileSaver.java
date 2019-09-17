@@ -10,6 +10,25 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileSaver {
 
 	
+	//FileDelete
+	//file API 사용 / realPath&fname 필요.
+	public int deleteFile(String realPath, String fname) throws Exception{
+		File file = new File(realPath, fname);
+		boolean check = false;
+		int result = 0;
+		
+		if(file.exists()) {
+			check = file.delete();
+		}
+		
+		
+		if(check) {
+			result = 1;
+		}
+		
+		return result;
+	}
+	
 	//3.Java : OutPutStream / byteType 필요
 	public String saveFile3(String realPath, MultipartFile multipartFile) throws Exception{
 		File file = new File(realPath);
@@ -24,6 +43,7 @@ public class FileSaver {
 		file = new File(realPath, fname);
 		FileOutputStream fs = new FileOutputStream(file);
 		fs.write(multipartFile.getBytes());
+		fs.close();
 		return fname;
 	}
 	

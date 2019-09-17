@@ -4,5 +4,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<bean class="com.project.files.FilesDAO" id="filesDAO" />
-
+	<bean class="com.project.files.FilesService" id="filesService" />
+	<bean class="com.project.util.FileSaver" id="fileSaver" />
 </beans>

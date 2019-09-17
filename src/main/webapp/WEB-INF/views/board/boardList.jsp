@@ -9,7 +9,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico">	
 <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico">
 <c:import url="../temp/font.jsp" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/memberJoin.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <style type="text/css">
 *{
@@ -21,8 +20,10 @@
 	width: 100%;
 }
 .main{
-	widows: 100%;
-	height: 1000px;
+	clear: both;
+	width: 65%;
+	height: 1100px;
+	margin: 0 auto;
 }
 
 .btn-div{
