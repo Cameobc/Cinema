@@ -37,21 +37,23 @@
 <div class="container">
 <c:import url="../temp/header.jsp" />
 	<div class="main">
-		<form:form commandName="noticeVO" enctype="multipart/form-data">
+		<form:form id="frm" commandName="noticeVO" enctype="multipart/form-data">
 			<div class="form-type">
 				<label for="title">제목</label>
-				<form:input path="title" id="title"/>
+				<form:input path="title" id="title" class="check"/>
 			</div>
 			<div class="form-type">
 				<label for="wirter">작성자</label>
-				<form:input path="writer" id="writer"/>
+				<form:input path="writer" id="writer" class="check"/>
 			</div>
 			<div class="form-type">
-				<form:textarea path="contents" id="contents"/>
+				<form:textarea path="contents" id="contents" class="check"/>
 			</div>
 			<div class="form-type">
 				<input type="button" class="btn" id="add" value="Add File">
-				<div id="files"></div>
+				<div id="files">
+					
+				</div>
 			</div>
 			<div class="form-type">
 				<input type="button" class="write" value=글쓰기>
@@ -59,39 +61,18 @@
 		</form:form>
 	</div>
 <c:import url="../temp/footer.jsp" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/summer.js"></script>
 <script type="text/javascript">
-$('#contents').summernote({
-	height : 600,
-	callbacks:{
-		onImageUpload: function(files){
-			var formData = new FormData();
-			formData.append('file', files[0]);
-			$.ajax({
-				type:"POST",
-				url:"../ajax/summerFileUpload",
-				data:formData,
-				enctype:"multipart/form-data",
-				cache:false,
-				contentType:false,
-				processData:false,
-				success:function(data){
-					$('#contents').summernote('editor.insertImage', data);
-				}
-			});
-		},
-		//OnImageUpload End
-		onMediaDelete:function(files){
-			var fileName = $(files[0]).attr('src');
-			$.ajax({
-				type:"POST",
-				url:"../ajax/summerFileDelete",
-				data:{fileName:fileName},
-				success:function(data){
-				}
-			});
+	var count=0;
+	
+	$('#add').click(function() {
+		count++;
+		if(count>5){
+			alert('파일 첨부는 최대 5개까지만 가능합니다.');
+		}else{
+			$('#files').append('<input type="file" class="if"><span class="del">X</span>');
 		}
-	}
-});
+	});
 </script>
 </div>
 </body>
