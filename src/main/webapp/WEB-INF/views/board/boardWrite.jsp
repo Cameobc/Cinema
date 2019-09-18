@@ -192,7 +192,10 @@
 		var fname = $(this).val();
 		$('input[title='+name+'').val(fname);
 	});
-
+	
+	$('.cancle').click(function() {
+		location.href="../";
+	});
 </script>
 </div>
 </body>

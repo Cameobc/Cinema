@@ -28,12 +28,13 @@ public class PageMaker {
 		this.perBlock = perBlock;
 	}
 	public Integer getCurPage() {
-		return curPage;
-	}
-	public void setCurPage(Integer curPage) {
 		if(curPage==null) {
 			curPage= 1;
 		}
+		return curPage;
+	}
+	public void setCurPage(Integer curPage) {
+
 		this.curPage = curPage;
 	}
 	public int getPerPage() {
@@ -49,12 +50,13 @@ public class PageMaker {
 		this.kind = kind;
 	}
 	public String getSearch() {
-		return search;
-	}
-	public void setSearch(String search) {
 		if(search == null) {
 			search = "";
 		}
+		return search;
+	}
+	public void setSearch(String search) {
+
 		this.search = search;
 	}
 	public int getStartRow() {

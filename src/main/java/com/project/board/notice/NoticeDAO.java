@@ -41,14 +41,12 @@ public class NoticeDAO implements BoardDAO {
 
 	@Override
 	public List<BoardVO> getList(PageMaker pageMaker) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectList(NAMESPACE+"getList", pageMaker);
 	}
 
 	@Override
 	public int getTotalCount(PageMaker pageMaker) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		return sqlSession.selectOne(NAMESPACE+"getTotalCount", pageMaker);
 	}
 
 	

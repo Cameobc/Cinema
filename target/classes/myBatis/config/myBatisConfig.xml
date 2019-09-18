@@ -12,5 +12,6 @@
     		<typeAlias type="com.project.memberfile.MemberFileVO" alias="MemberFileVO"/>
     		<typeAlias type="com.project.board.notice.NoticeVO" alias="NoticeVO"/>
     		<typeAlias type="com.project.files.FilesVO" alias="FilesVO"/>
+    		<typeAlias type="com.project.util.PageMaker" alias="PageMaker"/>
     	</typeAliases>
     </configuration>

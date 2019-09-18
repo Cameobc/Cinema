@@ -24,6 +24,7 @@ public class NoticeService implements BoardService {
 	private FileSaver fileSaver;
 	
 	
+	
 	@Override
 	public int setWrite(BoardVO boardVO, List<MultipartFile> files, HttpSession session) throws Exception {
 		String realPath = session.getServletContext().getRealPath("/resources/notice");
@@ -64,8 +65,14 @@ public class NoticeService implements BoardService {
 
 	@Override
 	public List<BoardVO> getList(PageMaker pageMaker) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		pageMaker.setPerPage(10);
+		pageMaker.setPerBlock(5);
+		System.out.println(pageMaker.getPerPage());
+		System.out.println(pageMaker.getCurPage());
+		pageMaker.makeRow();
+		int totalCount = noticeDAO.getTotalCount(pageMaker);
+		pageMaker.makePage(totalCount);
+		return noticeDAO.getList(pageMaker);
 	}
 
 }

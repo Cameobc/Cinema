@@ -10,6 +10,7 @@
 <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico">
 <c:import url="../temp/font.jsp" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
 *{
 	margin: 0;
@@ -18,6 +19,8 @@
 
 .container{
 	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 .main{
 	clear: both;
@@ -46,6 +49,49 @@
 <div class="container">
 <c:import url="../temp/header.jsp" />
 	<div class="main">
+		<div class="table-div">
+			<table>
+				<tr>
+					<td>NO</td>
+					<td>TITLE</td>
+					<td>WRITER</td>
+					<td>DATE</td>
+					<td>HIT</td>
+				</tr>
+				<c:forEach items="${list}" var="dto">
+					<tr>
+						<td>${dto.num}</td>
+						<td>${dto.title}</td>
+						<td>${dto.writer}</td>
+						<td>${dto.reg_date}</td>
+						<td>${dto.hit}</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</div>
+		<div class="search-div">
+			<form action="./${board}List">
+				<select name="kind">
+					<option value="t">글제목</option>
+					<option value="w">작성자</option>
+					<option value="c">글내용</option>
+				</select>
+				<input type="text" name="search">
+				<button>검색</button>
+			</form>
+		</div>
+		<div>
+			<ul class="pagination">
+				<li></li>
+			
+				<c:forEach begin="${page.startNum}" end="${page.lastNum}" var="i">
+					<li>${i}</li>
+				</c:forEach>
+				
+				
+				<li></li>
+			</ul>
+		</div>
 		<div class="btn-div">
 			<button id="write">글쓰기</button>
 		</div>

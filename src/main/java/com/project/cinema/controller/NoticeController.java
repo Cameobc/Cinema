@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.project.board.BoardVO;
 import com.project.board.notice.NoticeService;
 import com.project.board.notice.NoticeVO;
+import com.project.util.PageMaker;
 
 @Controller
 @RequestMapping(value = "/notice/")
@@ -25,9 +27,14 @@ public class NoticeController {
 	
 	
 	@RequestMapping(value = "noticeList")
-	public ModelAndView getList() throws Exception{
+	public ModelAndView getList(PageMaker pageMaker) throws Exception{
 		ModelAndView mv = new ModelAndView();
+		List<BoardVO> list = noticeService.getList(pageMaker);
 		mv.addObject("board", "noticeList");
+		mv.addObject("page", pageMaker);
+		System.out.println(pageMaker.getStartNum());
+		System.out.println(pageMaker.getLastNum());
+		mv.addObject("list", list);
 		mv.setViewName("board/boardList");
 		return mv;
 	}
