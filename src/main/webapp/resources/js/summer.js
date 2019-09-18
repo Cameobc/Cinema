@@ -4,6 +4,7 @@ $('#contents').summernote({
 		onImageUpload: function(files){
 			var formData = new FormData();
 			formData.append('file', files[0]);
+			console.log(files);
 			$.ajax({
 				type:"POST",
 				url:"../ajax/summerFileUpload",

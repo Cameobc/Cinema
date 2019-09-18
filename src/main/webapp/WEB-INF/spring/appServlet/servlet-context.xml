@@ -33,7 +33,7 @@
 			</beans:list>
 		</beans:property>
 	</beans:bean>
-	<context:component-scan base-package="com.project.cinema.Controller" />
+	<context:component-scan base-package="com.project.cinema.controller" />
 	
 	<beans:import resource="classpath:/spring/*"/>
 	

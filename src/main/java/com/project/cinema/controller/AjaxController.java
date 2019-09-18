@@ -1,4 +1,4 @@
-package com.project.cinema.Controller;
+package com.project.cinema.controller;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;

@@ -1,4 +1,4 @@
-package com.project.cinema.Controller;
+package com.project.cinema.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
